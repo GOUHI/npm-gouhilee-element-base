@@ -1,6 +1,6 @@
 {
   "name": "gouhilee-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "对elementPlus进行二次封装的组件库",
   "files": [
     "dist",
@@ -30,12 +30,12 @@
     "vite": "^4.3.4",
     "vue-tsc": "^1.6.4"
   },
-  "main": "./dist/penk-ui.umd.js",
-  "module": "./dist/penk-ui.es.js",
+  "main": "./dist/gouhilee-ui.umd.js",
+  "module": "./dist/gouhilee-ui.es.js",
   "exports": {
     ".": {
-      "import": "./dist/penk-ui.es.js",
-      "require": "./dist/penk-ui.umd.js"
+      "import": "./dist/gouhilee-ui.es.js",
+      "require": "./dist/gouhilee-ui.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   }
