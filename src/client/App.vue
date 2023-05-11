@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import PenkButton from "@/components/PenkButton.vue";
 </script>
 
 <template>
-  <PenkButton></PenkButton>
+  <div>测试功能</div>
 </template>
 
 <style scoped></style>
