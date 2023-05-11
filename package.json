@@ -1,6 +1,6 @@
 {
   "name": "gouhilee-ui",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "对elementPlus进行二次封装的组件库",
   "files": [
     "dist",
@@ -18,7 +18,9 @@
     "on-up": "run-p type-check build-only && yarn publish"
   },
   "dependencies": {
+    "dayjs": "^1.11.7",
     "element-plus": "^2.3.4",
+    "loadsh": "^0.0.4",
     "sass": "^1.62.1",
     "vue": "^3.2.47"
   },
