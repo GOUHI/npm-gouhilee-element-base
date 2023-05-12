@@ -1,11 +1,11 @@
 # vue3+element-plus封装公用组件
 
 基于vue3+element-plus封装的公用组件，统一样式，增加效率。
-分为4个模块
-1、BaseTable：通用表格组件
-2、BaseSearch：和表格搭配使用，表格头部的搜索功能组件
-3、BaseDrawer：通用抽屉组件，主要是统一样式
-4、BaseDialog：通用弹窗组件，主要是统一样式
+分为4个模块  
+1、BaseTable：通用表格组件  
+2、BaseSearch：和表格搭配使用，表格头部的搜索功能组件  
+3、BaseDrawer：通用抽屉组件，主要是统一样式  
+4、BaseDialog：通用弹窗组件，主要是统一样式  
 # 通用表格组件说明文档
 
 ### 通用表格
@@ -17,7 +17,7 @@
 - 自定义表格列
 - 表格尺寸
 
-![图片](/api/project/7883161/files/30657990/imagePreview)
+![图片](https://gouhi-typora.oss-cn-shanghai.aliyuncs.com/uPic/image-20230512093554784.png)
 
 ### 基础配置
 样例
@@ -120,9 +120,8 @@ loading | 表格loading状态 | string | 默认false，访问接口的时候给�
 tips | 表格左上方的提示信息 | string |  废弃
 isCheck | 是否显示多选 | boolean |  支持显示多选操作，可结合selectionChange方法使用
 isExpand | 是否显示展开 | boolean |  支持点击展开
-
 方法 | | |
-refresh | 刷新当前表格 | 原生方法 | 
+refresh | 刷新当前表格 | 原生方法 | | 
 selectionChange | 获取多选框返回的ids | | 
 
 ## table-column-表格列
@@ -162,7 +161,7 @@ export-ids | 导出ids | number[] |   导出选择的id，如果选择全部，�
 - 支持左右结构
 - 支持小于1660px变更input框宽度
 
-![图片](/api/project/7883161/files/30661900/imagePreview)
+![图片](https://gouhi-typora.oss-cn-shanghai.aliyuncs.com/uPic/image-20230512093752471.png)
 
 ### 基础配置
 样例
