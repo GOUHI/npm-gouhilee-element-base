@@ -81,6 +81,7 @@
     :highlight-current-row="true"
     v-loading="loading"
     @selection-change="selectionChange"
+    @sort-change="sortChange"
     >
     <el-table-column v-if="isExpand" type="expand">
       <template #default="scope: any">
@@ -100,6 +101,7 @@
         :show-overflow-tooltip="!!item.showOverflowTooltip"
         :fixed="item.prop === 'option' ? 'right' : false"
         :class-name="item.prop === 'option' ? 'operation' : ''"
+        :sortable="item.sortable ? item.sortable : false"
       >
         <template #header v-if="item.columnSlotHeader">
           <slot :name="`${item.columnSlot}Header`" :data="item" />
@@ -116,6 +118,7 @@
         :label="item.label"
         :min-width="item.minWidth"
         :width="item.width"
+        :sortable="item.sortable ? item.sortable : false"
       >
         <template #default="scope: any">
           <span v-if="item.date && getProLevel(scope.row , item)">{{ dayjs(getProLevel(scope.row , item)).format(item.date)}}</span>
@@ -145,7 +148,7 @@ import { ElMessage } from 'element-plus'
 import _get from 'lodash/get'
 import dayjs from 'dayjs'
 import { getCurrentInstance, ref, reactive, onMounted, type PropType } from 'vue' 
-const emits = defineEmits(['selectionChange', 'handleCurrentChange', 'handleSizeChange', 'refresh'])
+const emits = defineEmits(['selectionChange', 'sortChange', 'handleCurrentChange', 'handleSizeChange', 'refresh'])
 const current = getCurrentInstance()
 
 const $pageSize = current?.appContext.config.globalProperties.$pageSize
@@ -255,6 +258,10 @@ const getProLevel = (row: any,item: TableColumn) => {
 
  const selectionChange = (v: number[]) => {
   emits('selectionChange',v)
+ }
+
+ const sortChange = (column: {prop: string, order: string}) => {
+  emits('sortChange',column)
  }
 
 // 分页操作
