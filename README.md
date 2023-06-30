@@ -112,7 +112,7 @@ tableColumn: [
 ## table-data-表格数据
 标识 | 说明 | 字段类型 | 描述
 :----------- | :----------- | :-----------: | -----------:
-debug | 表格调试        |    boolean   |       当为false的时候，将不会存入sessionStorage中。建议外层直接给process.env.NODE_ENV === 'development'
+debug | 表格调试        |    boolean   |       当为false的时候，将不会存入sessionStorage中。建议外层直接给process.env.NODE_ENV === 'development',vue3:import.meta.env.VITE_NODE_ENV === 'development'
 height | 表格高度        |    number   |       用作表格上方多出的位置导致无法自适应，可以更加需求写上多出来的px高度即可
 tableName | 表格名称        |    string   |       用作表格列的名称存入sessionStorage中
 tableData | 表格显示内容        |     [{}]    |       可直接把接口返回的数组对象进行赋值（注意必须要有主键ID）
