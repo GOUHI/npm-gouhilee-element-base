@@ -7,11 +7,6 @@
   height: 40px;
   border-bottom: 1px solid #eee;
 
-  .btn {
-    display: flex;
-    align-items: center;
-  }
-
   .table_header_option {
     display: flex;
     align-items: center;
@@ -34,7 +29,7 @@
 </style>
 <template>
   <div class="table_header">
-    <div class="btn">
+    <div>
       <slot name="btn"></slot>
     </div>
     <div>
