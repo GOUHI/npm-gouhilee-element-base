@@ -72,7 +72,7 @@
     </div>
   </div>
   <el-table :data="tableData" v-bind="$attrs" height="100%" :highlight-current-row="true" v-loading="loading"
-    @selection-change="selectionChange" @sort-change="sortChange">
+    @selection-change="selectionChange" @sort-change="sortChange" :size="customParams.tableSize">
     <el-table-column v-if="isExpand" type="expand">
       <template #default="scope: any">
         <slot name="expand" :row=" scope.row "></slot>
