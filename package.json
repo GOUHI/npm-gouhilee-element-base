@@ -1,6 +1,6 @@
 {
   "name": "gouhilee-ui",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "对elementPlus进行二次封装的组件库",
   "files": [
     "dist",
