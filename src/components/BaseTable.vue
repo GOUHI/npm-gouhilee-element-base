@@ -49,7 +49,7 @@
                 size="large" class="m-l-20" />
 
               <el-radio-group v-model="customParams.tableSize" @change="setColumn" class="m-l-20">
-                <el-radio label="medium">表格大</el-radio>
+                <el-radio label="default">表格大</el-radio>
                 <el-radio label="small">表格小</el-radio>
               </el-radio-group>
             </div>
@@ -154,7 +154,7 @@ const column: Column = reactive({
 })
 let customParams: CustomParams = reactive({
   tableColumn: props.tableColumn || [],
-  tableSize: 'medium'
+  tableSize: 'default'
 })
 
 onMounted(() => {
@@ -164,7 +164,7 @@ onMounted(() => {
 
   if (props.debug) {
     customParams.tableColumn = props.tableColumn
-    customParams.tableSize = 'medium'
+    customParams.tableSize = 'default'
   } else {
     const sessionStorageCustomTable = sessionStorage.getItem(props.tableName)
     if (sessionStorageCustomTable) {
